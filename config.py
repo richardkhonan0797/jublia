@@ -19,3 +19,6 @@ class Config(object):
     )
 
     SQLALCHEMY_TRACK_MODIFICATIONS = os.environ.get("SQLALCHEMY_TRACK_MODIFICATIONS")
+
+    SMTP_SERVER = os.environ.get("SMTP_SERVER")
+    SMTP_PORT = os.environ.get("SMTP_PORT")

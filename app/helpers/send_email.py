@@ -14,7 +14,7 @@ def dequeue_email(email_subject, email_content, recipients, config):
     message["To"] = " ,".join(recipients)
     message["Subject"] = email_subject
     message.attach(MIMEText(email_content, 'html', 'utf-8'))
-    session = smtplib.SMTP('smtp.gmail.com', 587)
+    session = smtplib.SMTP(config["smtp_server"], config["smtp_port"])
     session.starttls()
     session.login(sender_address, config["pwd"])
     text = message.as_string()
@@ -25,6 +25,8 @@ def send_email(timestamp, email_subject, email_content, recipients):
     config = dict(
         host=os.environ.get("EMAIL_HOST"),
         pwd=os.environ.get("EMAIL_PASSWORD"),
+        smtp_server=os.environ.get("SMTP_SERVER"),
+        smtp_port=os.environ.get("SMTP_PORT")
     )
 
     q = Queue(
