@@ -93,10 +93,11 @@ class SaveRecipient(Resource):
                                 EmailRecipientContent(
                                     email_recipient_id=new_email_recipient.id,
                                     email_content_id=email.id,
-                                    job_id=job.id
+                                    job_id="rq:job:"+job.id
                                 )
                             )
                         db.session.add_all(new_email_recipient_content)
+                        db.session.commit()
 
                     db.session.close()
                 

@@ -75,7 +75,7 @@ class SaveEmail(Resource):
                             EmailRecipientContent(
                                 email_recipient_id = recipient.id,
                                 email_content_id = new_email_content.id,
-                                job_id = job.id
+                                job_id = "rq:job:"+job.id
                             )
                         )
                     
