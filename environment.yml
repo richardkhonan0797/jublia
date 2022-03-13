@@ -8,9 +8,11 @@ dependencies:
   - _openmp_mutex=4.5=1_gnu
   - alembic=1.7.6=pyhd8ed1ab_0
   - aniso8601=9.0.1=pyhd8ed1ab_0
-  - ca-certificates=2021.10.8=ha878542_0
-  - certifi=2021.10.8=py39hf3d152e_1
+  - attrs=20.2.0=py_0
+  - ca-certificates=2020.10.14=0
+  - certifi=2021.10.8=py39h06a4308_2
   - click=7.1.2=pyhd3eb1b0_0
+  - coverage=6.3.2=py39h7f8727e_0
   - flask=1.1.2=py_0
   - flask-cors=3.0.9=py_0
   - flask-marshmallow=0.14.0=pyh9f0ad1d_0
@@ -20,6 +22,7 @@ dependencies:
   - greenlet=1.1.1=py39h295c915_0
   - importlib-metadata=4.11.2=py39hf3d152e_0
   - importlib_resources=5.4.0=pyhd8ed1ab_0
+  - iniconfig=1.1.1=py_0
   - itsdangerous=1.1.0=py_0
   - jinja2=2.11.2=py_0
   - krb5=1.19.2=hac12032_0
@@ -37,8 +40,13 @@ dependencies:
   - marshmallow-sqlalchemy=0.28.0=pyhd8ed1ab_0
   - ncurses=6.3=h7f8727e_2
   - openssl=1.1.1m=h7f8727e_0
+  - packaging=20.4=py_0
   - pip=21.2.4=py39h06a4308_0
+  - pluggy=1.0.0=py39h06a4308_0
   - psycopg2=2.8.6=py39h3c74f83_1
+  - py=1.9.0=py_0
+  - pyparsing=2.4.7=py_0
+  - pytest=6.2.5=py39h06a4308_2
   - python=3.9.0=hdb3f193_2
   - python-dateutil=2.8.2=pyhd8ed1ab_0
   - python-dotenv=0.19.2=pyhd8ed1ab_0
@@ -52,6 +60,7 @@ dependencies:
   - sqlalchemy=1.4.27=py39h7f8727e_0
   - sqlite=3.38.0=hc218d9a_0
   - tk=8.6.11=h1ccaba5_0
+  - toml=0.10.1=py_0
   - tzdata=2021e=hda174b7_0
   - werkzeug=1.0.1=py_0
   - wheel=0.37.1=pyhd3eb1b0_0

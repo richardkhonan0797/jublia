@@ -12,9 +12,33 @@ class TestManageEmail(TestBase):
         db.session.remove()
         db.drop_all()
 
+    def test_get_manage_email(self, app, client):
+        email_content = [
+            EmailContent(
+                event_id=1,
+                email_subject="😋 Лорем",
+                email_content="Лорем ипсум долор сит амет, но пер утинам луптатум адолесценс, яуо цонгуе алияуандо ид. Усу не новум утамур доцен",
+                timestamp="15 Dec 2015 13:13"
+            ),
+            EmailContent(
+                event_id=2,
+                email_subject="Subject",
+                email_content="Content",
+                timestamp="15 Dec 2015 13:13"
+            )
+        ]
+        db.session.add_all(email_content)
+        db.session.commit()
+
+        response = client.get(
+            f'/manage_email'
+        )
+
+        self.assertEqual(200, response.status_code)
+        self.assertEqual(2, len(response.get_json()['data']))
+        
 
     def test_delete_manage_email(self, app, client):
-
         email_content = EmailContent(
             event_id=1,
             email_subject="😋 Лорем",
